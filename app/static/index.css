@@ -1,0 +1,37 @@
+#htmlView, 
+#jsView{
+    font-size: 25px;
+}
+#item_requests{
+    width: 50%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#method_requests{
+    width: 55%;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#htmlJsRender{
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+#request_get_item, 
+#request_get_item_id, 
+#request_post_item, 
+#request_put_item, 
+#request_del_item{
+    width: 30%;
+}
+#params_get_id,
+#params_post_nome,
+#params_del_id,
+#params_put_id{
+    width: 25%;
+}
+#params_put_nome{
+    width: 35%;
+}
+#result, #result_simple{
+    resize: none;
+}

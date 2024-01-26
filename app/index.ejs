@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node</title>
+    <link rel="stylesheet" type="text/css" href="static/index.css"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="htmlJsRender">
+    <pre id="htmlView">
+Pagina Renderizada em Node :
+<%= VARIAVEL_GLOBAL %> <%= AMBIENTE %></pre>
+
+    <pre id="jsView">
+Renderizado pelo JS:
+</pre>
+    <div>
+        <input name="foto" type="file" id="file" multiple/>
+        <input id="request_img" type="button" value="Enviar"/>
+    </div>
+    <div id="method_requests">
+        <button id="request_get">Fazer request GET</button>
+        <button id="request_post">Fazer request POST</button>
+        <button id="request_put">Fazer request PUT</button>
+        <button id="request_delete">Fazer request DELETE</button>
+        <textarea name="result_simple" id="result_simple" cols="70" rows="30" readonly="false"></textarea>
+    </div>
+    <div>
+        <div id="item_requests">
+            <div>
+                <button id="request_get_item">Ver itens</button>
+            </div>
+            <div>
+                <button id="request_get_item_id">Ver item</button>
+                <input type="number" id="params_get_id" placeholder="ID do Item">
+            </div>
+            <div>
+                <button id="request_post_item">Criar item</button>
+                <input type="text" id="params_post_nome" placeholder="Nome do Item">
+            </div>
+            <div>
+                <button id="request_put_item">Alterar item</button>
+                <input type="number" id="params_put_id" placeholder="ID do Item">
+                <input type="text" id="params_put_nome" placeholder="Nome do Item">
+            </div>
+            <div>
+                <button id="request_del_item">Deletar item</button>
+                <input type="number" id="params_del_id" placeholder="ID do Item">
+            </div>
+        </div>
+        <textarea name="result" id="result" cols="70" rows="30" readonly="false"></textarea>
+    </div>
+    <script src="https://cdn.socket.io/3.1.3/socket.io.min.js"></script>
+    <script>
+        const VARIAVEL_GLOBAL= "<%= VARIAVEL_GLOBAL %>";
+        const AMBIENTE = "<%= AMBIENTE %>";
+        $('#jsView').html($('#jsView').html() + VARIAVEL_GLOBAL);
+    </script>
+    <script src="static/index.js"></script>
+</body>
+</html>
